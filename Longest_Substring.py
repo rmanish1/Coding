@@ -2,14 +2,15 @@ def long_sub(s):
     count = 0
     max_count = 0
     prev = set()
-    for char in s:
-        if char not in prev:
-            prev.add(char)
+    for i in range(len(s)):
+        if s[i] not in prev:
+            prev.add(s[i])
             count += 1
         else:
-            prev = set()
-            count = 1
+            prev.clear()
+            count = 0
         max_count = max(max_count, count)
     return max_count
 
-print(long_sub("abcabcbb"))
+inp = input("Enter a String:\n>>> ")
+print(long_sub(inp))
