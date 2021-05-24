@@ -9,4 +9,5 @@ def solve(s):
                 return False
     return count == 0
 
-print(solve("(){}{}[])("))
+inp = input("Enter a String of Parentheses:\n>>> ")
+print(solve(inp))
